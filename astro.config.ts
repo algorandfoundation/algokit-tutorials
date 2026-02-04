@@ -5,5 +5,11 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
-  integrations: [tutorialkit()],
+  integrations: [
+    tutorialkit({
+      components: {
+        HeadTags: './src/components/HeadTags.astro',
+      },
+    }),
+  ],
 });
